@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+# WaiterBot System
 
-You can use the [editor on GitHub](https://github.com/cepdnaclk/e16-3yp-waiterbot-system/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+## Group Members
+- Kavindu Chamith - E/16/057 - e16057@eng.pdn.ac.lk
+- Shirly Madushanka - E/16/094 - e16094@eng.pdn.ac.lk
+- Buddhi Perera - E/16/276 - e16276@eng.pdn.ac.lk
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Project Description
 
-### Markdown
+![](images/main.jpg)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The WaiterBot System is an automated system designed for placing the orders and delivery of orders in a restaurant. This system will replace the human waiters with robot waiters for an efficient delivery process and this will also give customers a new experience. Customers can place orders via the mobile application and once the orders are ready the WaiterBots will deliver the orders to the customer.
 
-```markdown
-Syntax highlighted code block
+## Advising Lectures
+- Dr. Isuru Nawinne
+- Mr. Ziyan Maraikar
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cepdnaclk/e16-3yp-waiterbot-system/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Related Link
+ - [University Of Peradeniya](https://www.pdn.ac.lk/)
+ - [Faculty of Engineering, University of Peradeniya](http://eng.pdn.ac.lk/)
+ - [Department of Computer Engineering, Faculty of Engineering, University of Peradeniya](http://www.ce.pdn.ac.lk/)
