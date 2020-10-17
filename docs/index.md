@@ -7,7 +7,7 @@
 
 ## Project Description
 
-![](images/main.jpg)
+![](../images/main.jpg)
 
 The WaiterBot System is an automated system designed for placing the orders and delivery of orders in a restaurant. This system will replace the human waiters with robot waiters for an efficient delivery process and this will also give customers a new experience. Customers can place orders via the mobile application and once the orders are ready the WaiterBots will deliver the orders to the customer.
 
