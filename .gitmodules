@@ -1,0 +1,3 @@
+[submodule "waiterbot-api"]
+	path = waiterbot-api
+	url = https://github.com/shirlymadushanka/waiterbot-api.git
