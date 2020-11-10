@@ -38,7 +38,7 @@
 
     <header class="jumbotron">
         <div class="container">
-            <div class="row row-header align-items-center">
+            <div class="row align-items-center">
                 <div class="col-12 col-sm-6">
                     <h1>WaiterBot System</h1>
                     <p>Dine with Technology!</p>
@@ -61,7 +61,56 @@
                <hr>
             </div>
         </div>
- 
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-md-9">
+                <p>The WaiterBot System can be divided into 3 main parts considering the interaction of the customer, staff and robot.</p>
+                <ol>
+                    <li><a href=#customer>Placing the order by the customer</a> </li>
+                    <li><a href=#staff>Order Confirmation and Deploying the WaiterBot by the Restaurant Staff</a></li>
+                    <li><a href=#waiterbot>Delivery of the food items by the WaiterBot</a></li>
+                </ol>
+            </div>
+            <div class="col-12 col-sm-3"><img src="./img/intro.png" class="img-fluid"></div>
+        </div>
+
+        <div class="row row-content align-items-center" id=customer>
+            <div class="col-12 row-header">
+                <h3>Placing the order by the Customer</h3>
+            </div>
+            <div class="col-12 col-sm-3"><img src="./img/customer_process.png" class="img-fluid"></div>
+            <div class="col-12 col-md-9">
+                <p>Order placement is done via the WaiterBot Mobile application. Once a customer visits the restaurant, the customer will have to log in to the WaiterBot Mobile application and once they are logged in the customer will have to scan the QR code in the table. This for the system to identify the table where the customer is and to deliver the ordered items. Once the QR code scanning is successful the customer can place the order. All the items available will be shown to the customer and the unavailable items will be hidden. Each and every item will have the following details,</p>
+                <ul>
+                    <li>Images of the food item</li>
+                    <li>Price</li>
+                    <li>Ingrdients</li>
+                    <li>Reviews from previous customers</li>
+                </ul>
+                <p>Usually a customer placing the order will have to select the food items using a traditional menu card and might have questions when selecting food items like whether the selected item is good enough in terms of taste, quality, etc... Also, once the orders are placed, if the ordered item is not available due to various reasons, the waiter will have to inform the customer and the customer will have to order some other item, resulting in irritation of the customer in some cases as well. This order placing and delivery process may not be much efficient especially if the restaurant is busy with customers.
+                </p>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center" id=staff>
+            <div class="col-12 row-header">
+                <h3>Order Confirmation and Deploying the WaiterBot by the Restaurant Staff</h3>
+            </div>
+            <div class="col-12 col-md-9">
+                <p>When a customer selects the preferred items, the person at the control unit will have to confirm the order. After the payment process is complete the person at the control unit will be notified and a Waiterbot will be automatically assigned to that table. The order can then be sent to the kitchen for preparation. Once the order is ready, the food items have to be kept on the assigned WaiterBot and the WaiterBot can be sent for delivery. These robots are stationed near the control unit.</p>
+            </div>
+            <div class="col-12 col-sm-3"><img src="./img/staff_process.png" class="img-fluid"></div>
+        </div>
+        
+        <div class="row row-content align-items-center" id=waiterbot>
+            <div class="col-12 row-header">
+                <h3>Delivery Process by the WaiterBot</h3>
+            </div>
+            <div class="col-12 col-md-9">
+                <p>Once the WaiterBot is deployed, the WaiterBot will follow the correct path to the table. If there is an obstacle in the path the WaiterBot will stop the movement and notify the control unit. If the path is clear, the WaiterBot will follow its path to the correct table. When the WaiterBot reaches the correct table it will stay there until the customer collects all the food items from its tray. When all the food items are collected, the WaiterBot will notify the control unit and it will return to its station.</p>
+            </div>
+            <div class="col-12 col-sm-3"><img src="./img/solution.png" class="img-fluid"></div>
+        </div>
 
     </div>
 
