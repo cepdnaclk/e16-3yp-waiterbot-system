@@ -4,3 +4,6 @@
 [submodule "waiterbot_app"]
 	path = waiterbot_app
 	url = https://github.com/kavin-du/waiterbot_app.git
+[submodule "waiter-bot-owner-frontend"]
+	path = waiter-bot-owner-frontend
+	url = https://github.com/buddhiheshan/waiter-bot-owner-frontend.git
