@@ -7,3 +7,6 @@
 [submodule "waiter-bot-owner-frontend"]
 	path = waiter-bot-owner-frontend
 	url = https://github.com/buddhiheshan/waiter-bot-owner-frontend.git
+[submodule "waiterbot-operator"]
+	path = waiterbot-operator
+	url = https://github.com/buddhiheshan/waiterbot-operator.git
