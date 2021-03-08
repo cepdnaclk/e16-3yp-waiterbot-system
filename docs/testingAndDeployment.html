@@ -22,13 +22,13 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
+            <a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="30" width="41"></a>
             <div id="Navbar" class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./solution.html"><span class="fa fa-lightbulb-o fa-lg"></span> Solution Architecture</a></li>
                     <li class="nav-item"><a class="nav-link" href="./design.html"><span class="fa fa-pencil fa-lg"></span> Design</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./testingAndDeployment.html"><span class="fa fa-vial fa-lg"></span> Testing and Deployment</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-vial fa-lg"></span> Testing and Deployment</a></li>
                     <li class="nav-item"><a class="nav-link" href="./team.html"><span class="fa fa-user fa-lg"></span> Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="./future.html"><span class="fa fa-money fa-lg"></span> Budget & Future Developments</a></li>
                 </ul>
@@ -52,36 +52,40 @@
     </header>
 
     <div class='container'>
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-md-9">
-                <p>Robots have seen a wide array and continuous applications in various industries since their inception. The efficiency and versatility that robots possess can be molded into a vast area of services, and robots in restaurants can step up to be a huge breakthrough in terms of customer and owner satisfaction and improving the overall experience in diners.</p>
-                <p>The WaiterBot System is an automated system designed for placing and delivering orders in a restaurant. This system will replace the human waiters with robot waiters for an efficient delivery process and also give customers a new experience. Customers can place orders via the mobile application and once the orders are ready, the WaiterBots will deliver the orders to the customer.</p>
-            </div>
-            <div class="col-12 col-sm-3"><img src="./img/intro.png" class="img-fluid"></div>
-        </div>
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 row-header">
-                <h3>Current Practice and the Problems</h3>
-            </div>
-            <div class="col-12 col-sm-3"><img src="./img/problem.png" class="img-fluid"></div>
-            <div class="col-12 col-md-9">
-                <p>Currently in restaurants food is delivered by human waiters. Even the order placing is done through a waiter. You may have encountered situations where the waiter takes a long time to take the order and deliver it. The customers may also keep complaining that the service is not satisfactory. There may also be instances where the waiters might mess up the orders or not deliver the order to the correct customer. Due to these situations the reputation of your restaurant might be tarnished, and worse, if a customer faces these problems he/she will not visit your restaurant again because the service is not satisfactory and hence you will lose customers.</p>
-                <p>Usually a customer placing the order will have to select the food items using a traditional menu card and might have questions when selecting food items like whether the selected item is good enough in terms of taste, quality, etc... Also, once the orders are placed, if the ordered item is not available due to various reasons, the waiter will have to inform the customer and the customer will have to order some other item, resulting in irritation of the customer in some cases as well. This order placing and delivery process may not be much efficient especially if the restaurant is busy with customers.
-                </p>
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active">Testing and Deployment</a></li>
+            </ol>
+            <div class="col-12">
+               <h3>Testing and Deployment</h3>
+               <hr>
             </div>
         </div>
-
         <div class="row row-content align-items-center">
             <div class="col-12 row-header">
-                <h3>Our Solution</h3>
+                <h5>Testing</h5>
             </div>
-            <div class="col-12 col-md-9">
-                <p>Our solution is to replace the human waiter with a robot waiter and also to replace the traditional menu cards system with a more attractive and efficient order placing system. On an event where a customer visits the restaurant he/she can place the order via the order placing system and once the ordered items are ready, the items will be delivered to the customer. Our solution will help the customer to select the food items more efficiently with help of the reviews from previous customers and also if an item is unavailable that item will not be shown in the menu. The WaiterBot system will help the restaurant by providing an efficient delivery mechanism. WaiterBots will not mess up orders and they will deliver the food items to the correct table. Also this may be a new experience for the customers and the WaiterBot system will attract more customers to the restaurant.</p>
-            </div>
-            <div class="col-12 col-sm-3"><img src="./img/solution.png" class="img-fluid"></div>
+            <div>Mainly we are considering <strong>Integration testing</strong>  and <strong>Unit testing</strong>. For unit testing we are using <strong><a href="https://jestjs.io/">jest.js</a></strong> framework.And for intergration testing we are using <strong><a href="https://www.npmjs.com/package/supertest">supertest</a></strong> with <strong><a href="https://jestjs.io/">jest.js</a></strong>. </div>
+
+            <div class="col-12 row-header">Backend testing coverage report</div>
+            <div class="col-12"><img src="./img/testing/test1.PNG" class="img-fluid"></div>
+            <div class="col-12"><img src="./img/testing/test2.PNG" class="img-fluid"></div>
+            <div class="col-12"><img src="./img/testing/coverage1.PNG" class="img-fluid"></div>  
+            <div class="col-12"><img src="./img/testing/coverage2.PNG" class="img-fluid"></div>  
+
+            <div class="col-12 row-header">Mobile Unit Testing</div>
+            <div class="col-12"><img src="./img/testing/mobile.png" class="img-fluid"></div>   
         </div>
-        
+
+        <div class="row row-content">
+            <div class="col-12">
+                <h4>Deployment</h4>
+            </div>
+            <div class="col-12"><img src="./img/testing/cloud.PNG" class="img-fluid"></div>
+        </div>
+
+
     </div>
 
 
@@ -92,10 +96,10 @@
                 <div class='col-12 col-sm-4'>
                     <h5>Links</h5>
                     <ul class='list-unstyled'>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="./solution.html">Solution Architecture</a></li>
                         <li><a href="./design.html">Design</a></li>
-                        <li><a href="./testingAndDeployment.html">Testing and Deployment</a></li>
+                        <li><a href="#">Testing and Deployment</a></li>
                         <li><a href="./team.html">Team</a></li>
                         <li><a href="./future.html">Budget & Future Development</a></li>
                     </ul>
@@ -110,7 +114,7 @@
                 </div>
                 <div class='col-12 col-md-3'>
                     <div class='text-center'>
-                        <a class="btn btn-social-icon btn-github btn-lg" href="https://github.com/cepdnaclk/e16-3yp-waiterbot-system" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-github btn-lg" href="https://github.com/cepdnaclk/e16-3yp-waiterbot-system"><i class="fa fa-github fa-lg"></i></a>
                     </div>
                 </div>
            </div>
