@@ -27,7 +27,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./solution.html"><span class="fa fa-lightbulb-o fa-lg"></span> Solution Architecture</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-pencil fa-lg"></span> Design</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-pencil fa-lg"></span> Design and Progress</a></li>
                     <li class="nav-item"><a class="nav-link" href="./testingAndDeployment.html"><span class="fa fa-vial fa-lg"></span> Testing and Deployment</a></li>
                     <li class="nav-item"><a class="nav-link" href="./team.html"><span class="fa fa-user fa-lg"></span> Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="./future.html"><span class="fa fa-money fa-lg"></span> Budget & Future Developments</a></li>
@@ -55,7 +55,7 @@
         <div class="row">
             <ol class="col-12 breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item active">Design</a></li>
+                <li class="breadcrumb-item active">Design and Progress</a></li>
             </ol>
             <div class="col-12">
                <h3>Design</h3>
@@ -76,6 +76,7 @@
                         <li><a href=#waiterbot_overall>Overall Design</a> </li>
                         <li><a href=#waiterbot_hardware>Hardware Components Used</a></li>
                         <li><a href=#waiterbot_connection>Circuit Diagram</a></li>
+                        <li><a href=#waiterbot_pcb>PCB Design</a></li>
                         <li><a href=#waiterbot_protocols>Communication Protocols</a></li>
                         <li><a href=#waiterbot_control>Control Flow Diagram</a></li>
                         <li><a href=#waiterbot_models>3D Model</a></li>
@@ -90,12 +91,8 @@
                         <li><a href=#backend_api>Considered aspects when designing the API</a></li>
                         <li><a href=#backend_request>How API handles a request</a></li>
                     </ul>
-                    <li><a href=#frontend>Mobile Application and Web Appilcation</a></li>
-                    <ul>
-                        <li><a href=#frontend_mobileoverall>Mobile Application</a></li>
-                        <li><a href=#frontend_mobiledesign>Mobile UI Designs</a></li>
-                        <li><a href=#frontend_weboverall>Web Application</a></li>
-                    </ul>
+                    <li><a href=#frontend_mobileoverall>Mobile Application</a></li>
+                    <li><a href=#frontend_weboverall>Web Application and Desktop Application</a></li>
                 </ol>
             </div>
         </div>
@@ -278,7 +275,7 @@
                             <h6>Power</h6>
                             <div>Batteries - Lithium ion 18650 3.7V</div>
                             <ul>
-                                <li>2 battery packs used
+                                <li>Two voltage levels from battery pack used
                                     <ul>
                                         <li>5V for the sensors and micro controller</li>
                                         <li>12V for the motors</li>
@@ -314,13 +311,13 @@
                         <div class="col-12 col-md-10">
                             <div>Step Up Module</div>
                             <ul>
-                                <li>To step up from 3.7V to 5V</li>
+                                <li>To step down from 12V to 5V</li>
                             </ul>
                         </div>
                         <div class="col-12 col-md-2">
                             <div class="card">
                                 <img src="img/design/stepup.png" class="img-fluid align-self-center" width="100">
-                                <h6 class="card-header bg-primary text-white text-center">Step Up Module</h6>
+                                <h6 class="card-header bg-primary text-white text-center">Step Down Module</h6>
                             </div>
                         </div>
                     </div>
@@ -360,22 +357,34 @@
             <div class="col-12 col-sm-8 mx-auto"><img src="./img/design/component_connections.png" class="img-fluid"></div>   
         </div>
 
+        <div class="row row-content align-items-center" id=waiterbot_pcb>
+            <div class="col-12 row-header">
+                <h5>PCB Design</h5>
+            </div>
+            <div class="col-12 col-sm-8 mx-auto"><img src="./img/design/pcb.png" class="img-fluid"></div>   
+        </div>
+
         <div class="row row-content align-items-center" id=waiterbot_protocols>
             <div class="col-12 row-header">
                 <h5>Communication Protocols</h5>
             </div>
             <div class="col-12 col-md-9">
                 <ul>
-                    <li>MQTT protocal is used to communicate between waiterbots and the control units.</li>
-                    <li>WaiterBot will act as a subscriber/publisher.</li>
+                    <li>Web socket sare used to communicate between waiterbots and the control unit.</li>
+                    <li>Control Unit will start a web socket server when the operator desktop app is started.</li>
+                    <li>WaiterBots will establish web socket connections to the control unit.</li>
                 </ul>
             </div>
-            <!-- <div class="col-12 col-sm-3"><img src="./img/design/robot_overall.PNG" class="img-fluid"></div>    -->
+            <div class="col-12"><img src="./img/design/communication.png" class="img-fluid"></div>   
         </div>
+
         <div class="row row-content align-items-center" id=waiterbot_control>
             <div class="col-12 row-header">
                 <h5>Control Flow Diagram</h5>
             </div>
+            <ul>
+                <li>Following flowchart shows the main structure of the node software running on the waiterbot.</li>
+            </ul>
             <div class="col-12 col-sm-8 mx-auto"><img src="./img/design/robot_flowchart.png" class="img-fluid"></div>      
         </div>
 
@@ -402,8 +411,8 @@
                     <li>Main hardware used in the control unit is a laptop.</li>
                     <li>Control unit creates a local network and the WaiterBots are connected to it. This is to isolate the WaiterBots from the internet.</li>
                     <li>In case of a power faliure, the WaitBots can serve already placed orders because internet is not required for the operation of the WaiterBots.</li>
-                    <li>MQTT is used for communication between the control unit and WaiterBots.</li>
-                    <li>Control unit will act as a broker/publisher. And at the same time WaiterBots are subscribed to the topic and they act as the subscribers/publishers. We can verify the clients using username, password method or using certificates and MQTT provides the facilities for this. TLS is used for encrypting the messages passing through the brokers and subscribers/publishers and TLS provides encrypted pipes which messages can flow. MQTT uses low bandwidth compared to the other protocols which contains only 2 bytes fixed header + payload. And this provided low bandwidth usage. Control unit mainly consists of a laptop which acts as a broker/publisher.</li>
+                    <li>Web sockets are used for communication between the control unit and WaiterBots.</li>
+                    <li>Control unit will act as the web socket server. And at the same time WaiterBots will act as the web socket clients. We can verify the clients using username, password method or using certificates. TLS is used for encrypting the messages passing through the web sockets and TLS provides encrypted pipes which messages can flow.</li>
                     <li>Control unit is also connected to the cloud server. </li>
                 </ul>
             </div>
@@ -584,44 +593,64 @@
             <div class="col-12 col-sm-3"><img src="./img/design/inner.png" class="img-fluid"></div>  
         </div>
 
-        <div class="row align-items-center" id=frontend>
+        <div class="row align-items-center" id=frontend_weboverall>
             <div class="col-12 row-header">
-                <h3>Web Application</h3>
+                <h3>Web Application and Desktop Application</h3>
             </div>
         </div>
 
-        <div class="row row-content align-items-center" id=frontend_weboverall>
+        <div class="row row-content align-items-center" id=frontend_mobiledesign>
             <div class="col-12 row-header">
-                <h5>Web Application</h5>
+                <h5>Desgin Architecture</h5>
+            </div> 
+            <div class="col-12"><img src="./img/design/webUI/architecture.png" class="img-fluid"></div>   
+        </div>
+
+        <div class="row row-content align-items-center" >
+            <div class="col-12 row-header">
+                <h5>Web Application of Owner</h5>
             </div>
             <div class="col-12 col-sm-9">
                 <ul>
                     <li>We used React.js for the development of the web application. React can build fast, scalable web applications due to its DOM rendering architecture. And it also has a larger community support and a vast number of libraries.</li>
                     <li>Redux is used for state management.</li>
                     <li>Axios is used for communication with the backend server.</li>
-                    <li>This is the UI of the restaurant staff. New orders, robot status, adding items to the menu can be done via the web application.</li>
+                    <li>This is the UI of the restaurant owner. New orders, robot status, adding items to the menu can be done via the web application.</li>
                 </ul>
             </div>
             <div class="col-12 col-sm-3"><img src="./img/design/react.png" class="img-fluid"></div>  
         </div>
 
-        <div class="row row-content align-items-center" id=frontend_mobiledesign>
-            <div class="col-12 row-header">
-                <h5>Web UI</h5>
-            </div> 
-            <div class="col-12"><img src="./img/design/webUI/architecture.png" class="img-fluid"></div>   
-        </div>
+        
 
         <div class="row row-content align-items-center" id=frontend_mobiledesign>
-            <div class="col-12 row-header">
-                <h5>Web UI</h5>
-            </div>
-            <div class="col-12 row-header">Owner UI</div>
             <div class="col-12 col-sm-6"><img src="./img/design/webUI/owner/login.png" class="img-fluid"></div>   
             <div class="col-12 col-sm-6"><img src="./img/design/webUI/owner/store.png" class="img-fluid"></div>   
             <div class="col-12 col-sm-6"><img src="./img/design/webUI/owner/menu.png" class="img-fluid"></div>   
-            <div class="col-12 col-sm-6"><img src="./img/design/webUI/owner/additem.png" class="img-fluid"></div>   
-            <div class="col-12 col-sm-6"><img src="./img/design/webUI/owner/tables.png" class="img-fluid"></div>   
+            <div class="col-12 col-sm-6"><img src="./img/design/webUI/owner/additem.png" class="img-fluid"></div>  
+            <div class="col-12 col-sm-6"><img src="./img/design/webUI/owner/orders.png" class="img-fluid"></div> 
+            <div class="col-12 col-sm-6"><img src="./img/design/webUI/owner/tables.png" class="img-fluid"></div>    
+        </div>
+
+        <div class="row row-content align-items-center" id=frontend_weboverall>
+            <div class="col-12 row-header">
+                <h5>Desktop Application of Operator</h5>
+            </div>
+            <div class="col-12 col-sm-9">
+                <ul>
+                    <li>We used React.js for the development of the web application. React can build fast, scalable web applications due to its DOM rendering architecture. And it also has a larger community support and a vast number of libraries.</li>
+                    <li>Redux is used for state management.</li>
+                    <li>Axios is used for communication with the backend server.</li>
+                    <li>Electron.js was used to build the cross-platform desktop application.</li>
+                    <li>This is the UI of the operator. Accepting orders, deploying robot and changing item status can be done via the desktop application.</li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-3"><img src="./img/design/react.png" class="img-fluid"></div>  
+        </div>
+
+        
+
+        <div class="row row-content align-items-center" id=frontend_mobiledesign>  
 
             <div class="col-12 row-header">Operator UI</div>
             <div class="col-12 col-sm-6"><img src="./img/design/webUI/operator/login.png" class="img-fluid"></div>   
@@ -642,7 +671,7 @@
                     <ul class='list-unstyled'>
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./solution.html">Solution Architecture</a></li>
-                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Design and Progress</a></li>
                         <li><a href="./testingAndDeployment.html">Testing and Deployment</a></li>
                         <li><a href="./team.html">Team</a></li>
                         <li><a href="./future.html">Budget & Future Development</a></li>
