@@ -1,0 +1,47 @@
+{
+    "title": "WaiterBot System",
+    "team": [
+        {
+            "name": "Shiry Ekanayake",
+            "email": "e16094@eng.pdn.ac.lk",
+            "eNumber": "E/16/094",
+            "github_profile":"https://github.com/shirlymadushanka",
+            "linkedin_profile":"https://www.linkedin.com/in/shirlyekanayake/"
+        },
+        {
+            "name": "Buddhi Perera",
+            "email": "e16276@eng.pdn.ac.lk",
+            "eNumber": "E/16/276",
+            "github_profile":"https://github.com/buddhiheshan",
+            "linkedin_profile":"https://www.linkedin.com/in/buddhi-perera/"
+        },
+        {
+            "name": "Kavindu Chamith",
+            "email": "e16057@eng.pdn.ac.lk",
+            "eNumber": "E/16/057",
+            "github_profile":"https://github.com/kavin-du",
+            "linkedin_profile":"https://www.linkedin.com/in/kavindu-chamith-539a551a4/"
+        }
+    ],
+    "supervisors": [
+        {
+            "name": "Dr. Isuru Nawinne",
+            "email": "isurunawinne@eng.pdn.ac.lk",
+            "linkedin_profile":"#",
+            "researchgate_profile":"#"
+        },
+        {
+            "name": "Mr. Ziyan Maraikar",
+            "email": "#",
+            "linkedin_profile":"#",
+            "researchgate_profile":"#"
+        },
+        {
+            "name": "Dr. Upul Jayasinghe",
+            "email": "upuljm@eng.pdn.ac.lk",
+            "linkedin_profile":"#",
+            "researchgate_profile":"#"
+        }
+    ],
+    "tags": ["Web", "Embedded Systems"]
+}
